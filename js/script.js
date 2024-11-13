@@ -7,5 +7,19 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 - L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
 */
 
-const distanza = prompt('Quanti chilometri vuoi percorrere?');
-const anni = prompt('Quanti anni hai?')
+const distanza = parseInt(prompt('Quanti chilometri vuoi percorrere?'));
+const anni = parseInt(prompt('Quanti anni hai?'));
+const prezzoKm = 0.21
+let price = (prezzoKm * distanza)
+let sconto = 0
+
+if (anni < 18) {sconto = 20 / 100}
+else if (anni > 64) {sconto = 40 / 100}
+
+let prezzoScontato = price * (1 - sconto)  //moltiplico per l'80% restante nel caso dei minorenni e del 60% in caso di Over
+
+price = prezzoScontato
+
+//console.log(prezzoScontato)
+
+const prezzoFinale = prompt('Il prezzo del tuo biglietto è: ',price.toFixed(2), 'euro')

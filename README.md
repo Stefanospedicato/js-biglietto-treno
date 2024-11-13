@@ -9,3 +9,4 @@ Creazione di sistema per il controllo del prezzo di un biglietto del treno
 - Per il prezzo scontato finale, ho calcolato il prezzo di partenza in base ai km scelti (price) e l'ho moltiplicato per 1 (rappresenta il 100%) meno la cifra calcolata dalle graffe precedentemente.
 - Per far visualizzare il prezzo finale ho usato sempre un prompt, perchè provando con alert o window.confirm, non esce il prezzo.
 - Al prezzo nel prompt finale ho dato il metodo .toFixed(2) per far vedere i centesimi nel giusto modo.
+- Sono riuscito a dare un senso al window.comfirm utilizzando la somma nelle parentesi.

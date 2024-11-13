@@ -22,4 +22,4 @@ price = prezzoScontato
 
 //console.log(prezzoScontato)
 
-const prezzoFinale = prompt('Il prezzo del tuo biglietto è: ',price.toFixed(2), 'euro')
+const prezzoFinale = window.confirm('Il prezzo del tuo biglietto è di €'+ ' ' + price.toFixed(2))

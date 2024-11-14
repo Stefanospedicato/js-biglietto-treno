@@ -12,9 +12,14 @@ const anni = parseInt(prompt('Quanti anni hai?'));
 const prezzoKm = 0.21
 let price = (prezzoKm * distanza)
 let sconto = 0
+let message;
 
-if (anni < 18) {sconto = 20 / 100}
-else if (anni > 64) {sconto = 40 / 100}
+if (anni < 18) {sconto = 20 / 100
+  message = 'Sei minorenne, hai diritto ad uno sconto del 20%'
+}
+else if (anni > 64) {sconto = 40 / 100
+  message = 'Sei over65, hai diritto ad uno sconto del 40%'
+}
 
 let prezzoScontato = price * (1 - sconto)  //moltiplico per l'80% restante nel caso dei minorenni e del 60% in caso di Over
 
@@ -23,3 +28,5 @@ price = prezzoScontato
 //console.log(prezzoScontato)
 
 const prezzoFinale = window.confirm('Il prezzo del tuo biglietto è di €'+ ' ' + price.toFixed(2))
+
+console.log(message)
